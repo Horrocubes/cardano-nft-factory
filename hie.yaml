@@ -1,0 +1,5 @@
+cradle:
+  cabal:
+    - path: "./src"
+    - path: "./app/plutus-horrocubes-tokens.hs"
+      component: "exe:plutus-horrocubes-tokens"
