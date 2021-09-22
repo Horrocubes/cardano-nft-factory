@@ -50,6 +50,7 @@ library
                       , cardano-api
                       , plutus-ledger
                       , plutus-ledger-api
+                      , plutus-tx-plugin
                       , plutus-tx
                       , serialise
 
@@ -62,6 +63,8 @@ executable plutus-horrocubes-tokens
   ghc-options:          -threaded -rtsopts "-with-rtsopts=-T"
   build-depends:        cardano-api
                       , plutus-ledger
+                      , plutus-ledger-api
                       , plutus-horrocubes
                       , hex
+                      , bytestring 
 

@@ -34,7 +34,8 @@ and sightly modified to the the token name as an outside parameter.
 
 module Horrocubes.MintingScript
 (
-  mintScript
+  mintScript,
+  nftScriptShortBs
 ) where
 
 -- IMPORTS --------------------------------------------------------------------
@@ -91,6 +92,10 @@ nftValidator utxo tn = Validator $  nftPlutusScript utxo tn
 -- | Serializes the contract in CBOR format.
 nftScriptAsCbor :: TxOutRef -> TokenName -> LB.ByteString
 nftScriptAsCbor utxo tn = serialise $ nftValidator utxo tn
+
+-- | Serializes the contract in CBOR format.
+nftScriptShortBs :: TxOutRef -> BuiltinByteString -> SBS.ShortByteString
+nftScriptShortBs utxo tn = SBS.toShort . LB.toStrict $ nftScriptAsCbor utxo $ toTokenName tn
 
 -- | Gets a serizlize plutus script from the given UTXO and token name.
 mintScript :: TxOutRef -> BuiltinByteString -> PlutusScript PlutusScriptV1
