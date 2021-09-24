@@ -122,3 +122,4 @@ $ cabal build
 $ cabal run plutus-horrocubes-tokens 0f4533c49ee25821af3c2597876a1e9a9cc63ad5054dc453c4e4dc91a9cd7211#0 MyNewToken ./out.plutus
 ```
 
+cardano-cli transaction policyid --script-file out.plutus
