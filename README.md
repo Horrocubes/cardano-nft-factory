@@ -133,7 +133,7 @@ License
 Instructions:
 https://github.com/input-output-hk/Alonzo-testnet/blob/main/Alonzo-tutorials/Plutus_transactions_tutorial.md
 
-Mintin policy:
+Minting policy:
 https://github.com/input-output-hk/lobster-challenge/blob/main/src/Cardano/PlutusLobster/LobsterScript.hs
 
 I just modified offchain code to take the token name as parameter.
